@@ -1,0 +1,20 @@
+/* RADU Sabina - 321CB */
+
+In book.h se afla declarate strucutrile respective cartilor si functiile pentru acestea, iar in trie.h se afla cele pentru trie.
+
+Pentru book am implementat 2 functii: de creare si afisare. Cea de creare verifica daca exista cartea si copiaza numele si autorul.
+Pentru trie am implementat o serie de functii, una care gaseste pozitia in alfabet.
+
+La functia createFromString, daca string ul nu exista atunci informatia de la trie ajunge la final si se returneaza trie. Se apeleaza functia createFromString in mod recursiv.
+
+La addFromString, daca string ul ajunge la final se returneaza 1. daca copilul exista atunci se apeleaza functia in mod recursiv pentru a gasi si altii. Daca nu exista, atunci se apeleaza createFromString.
+
+In searchTrie, daca stringul nu exista atunci se returneaza trie. Daca copilul nu exista, atunci intoarce null si se apeleaza in mod recursiv functia pentru a gasi altii.
+
+Functia createAuthorTrie creaza un trie de autori, iar la final un autor are un trie de carti vs un trie de carti, care la final are o carte.
+
+Functia addAuthorTrie cauta un autor si daca exista, adauga cartea in trie-ul de carti al lui. Daca nu exista, il adauga in trie de autori, si dupa creaza trie de carti pentru cartile autorului.
+
+La finalul functiilor deleteAuthorTrie si deleteBookTrie se elibereaza memoria.
+
+In main.c am facut consola in care am citit din fisier, am despartit cu strtok comanda de parametri.
